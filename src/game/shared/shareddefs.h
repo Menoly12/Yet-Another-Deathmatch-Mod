@@ -237,9 +237,9 @@ enum CastVote
 #define MAX_PLACE_NAME_LENGTH		18
 
 #if defined ( TF_CLASSIC ) || defined ( TF_CLASSIC_CLIENT )
-#define MAX_FOV						100
+#define MAX_FOV						130
 #else
-#define MAX_FOV						90
+#define MAX_FOV						130
 #endif
 
 //===================================================================================================================
