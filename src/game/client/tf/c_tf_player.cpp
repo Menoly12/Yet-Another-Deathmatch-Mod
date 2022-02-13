@@ -494,8 +494,8 @@ void C_TFRagdoll::CreateTFRagdoll(void)
 		{
 			// This is the local player, so set them in a default
 			// pose and slam their velocity, angles and origin
-			SetAbsOrigin( pPlayer->GetRenderOrigin() );
-			SetAbsAngles( pPlayer->GetRenderAngles() );
+			SetNetworkOrigin( pPlayer->GetRenderOrigin() );
+			SetNetworkAngles( pPlayer->GetRenderAngles() );
 			SetAbsVelocity( m_vecRagdollVelocity );
 
 			// Hack! Find a neutral standing pose or use the idle.
@@ -535,8 +535,8 @@ void C_TFRagdoll::CreateTFRagdoll(void)
 			ForceClientSideAnimationOn();
 
 			// Slame velocity when doing death animation.
-			SetAbsOrigin( pPlayer->GetNetworkOrigin() );
-			SetAbsAngles( pPlayer->GetRenderAngles() );
+			SetNetworkOrigin( pPlayer->GetNetworkOrigin() );
+			SetNetworkAngles( pPlayer->GetRenderAngles() );
 			SetAbsVelocity( vec3_origin );
 			m_vecForce = vec3_origin;
 
